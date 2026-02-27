@@ -15,9 +15,16 @@ public class Solution {
             frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
         }
 
+        StringBuilder output = new StringBuilder();
+
         for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+            output.append(entry.getKey())
+                  .append(": ")
+                  .append(entry.getValue())
+                  .append(" ");
         }
+
+        System.out.print(output.toString().trim());
 
         scanner.close();
     }
